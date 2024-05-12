@@ -4,6 +4,7 @@ import sys
 
 pygame.init()
 
+# Simple code that creates the window to play in, also have my values listed here.
 screen_height = 300
 screen_width = 300
 line_width = 6
@@ -26,6 +27,7 @@ def reset_markers():
     global markers
     markers = [[0] * 3 for _ in range(3)]
 
+# Reset the board before starting just to make sure the game runs smoothly
 reset_markers()
 
 def reset_game():
@@ -34,11 +36,13 @@ def reset_game():
     player = 1   
     game_over = False
     winner = 0
+
 def draw_menu():
     screen.fill((0, 0, 0))
     for text, pos in menu_options.items():
         text_surf = font.render(text, True, blue)
         screen.blit(text_surf, pos)
+
 def draw_board():
     bg = (0, 0, 0)
     grid = (200, 200, 200)
@@ -60,6 +64,7 @@ def draw_markers():
             y_pos += 1
         x_pos += 1
 
+# Checks for a winner by looking to see if there is three in a row.     
 def check_game_over():
     global game_over, winner
     for col in range(3):
@@ -119,6 +124,9 @@ def prompt_player_choice():
                     return 1  
                 else:
                     return -1  
+
+
+# The goal is for the AI to always prioritize the center piece. After that It should always make the opposite move adjacent to the players move, UNLESS there is a winning move in the AI's favor. If there is not, the AI will forever stalemate the player.
 def ai_move():
     global player, game_over
     if markers[1][1] == 0:
