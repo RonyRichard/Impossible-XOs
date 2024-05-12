@@ -1,30 +1,29 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+I wanted to gain some practice making an AI that can make its own decisions based on what input it recieves from the player. I learned a lot from this project.
 
-{Provide a description the game that you wrote. Describe how to play your game.}
+It is a simple Tic-Tac-Toe game. You can Choose vs a player (for two player on the same device) or vs AI. When you choose vs AI you can choose to play first or second. The goal is for the AI to be unbeatable. The game will always end in a draw or a win in the AI's favor. 
 
-{Describe your purpose for writing this software.}
+The hardest part was reviewing on youtube videos on how to use pygame. It has been a long time since I last used it. 
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the game being played and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/UnzHzI91mhU)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+Visual Studio Code
 
-{Describe the programming language that you used and any libraries.}
+Pygame, Python
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+
+* [Arcade Academy](https://api.arcade.academy/en/latest/examples/index.html)
+* [Real Python](https://realpython.com/arcade-python-game-framework/)
+* [Tic-Tac-Toe Tutorial](https://www.youtube.com/watch?v=KBpfB1qQx8w)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+Bug 1: When playing vs AI, sometimes the code will take until the next move to acknowledge that the AI has won. For example, if the AI has won on move 7, you will have to move before the "You lost" screen appears. 
+
+Bug 2: If the AI wins in a way that has 3 in a row in more then one way (For Example, a Horizontal and vertical win using the top middle box) it will get stuck. This bug really stumped me because I dont have this bug in the Versus mode. 
